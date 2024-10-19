@@ -1,23 +1,16 @@
 import React, { useState } from 'react';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Handle input change
   const handleChange = (e) => {
-    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [e.target.name]: e.target.value,
     });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
@@ -25,18 +18,17 @@ function Contact() {
 
   return (
     <div className="container mt-5">
-      <h1 className="text-center text-purple mb-4">Contact Me</h1>
+      <h1>Contact Me</h1>
       {isSubmitted ? (
-        <div className="alert alert-success text-center" role="alert">
-          <h4>Thank you, {formData.name}!</h4>
-          <p>Your message has been sent successfully.</p>
-          <p><strong>Email:</strong> {formData.email}</p>
-          <p><strong>Message:</strong> {formData.message}</p>
+        <div className="alert alert-success" role="alert">
+          <p>Thank you, {formData.name}! Your message has been sent.</p>
+          <p>Email: {formData.email}</p>
+          <p>Message: {formData.message}</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label" style={{ color: '#6f42c1' }}>Name:</label>
+            <label className="form-label">Name:</label>
             <input
               type="text"
               className="form-control"
@@ -44,11 +36,10 @@ function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              style={{ borderColor: '#6f42c1' }}
             />
           </div>
           <div className="mb-3">
-            <label className="form-label" style={{ color: '#6f42c1' }}>Email:</label>
+            <label className="form-label">Email:</label>
             <input
               type="email"
               className="form-control"
@@ -56,25 +47,21 @@ function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              style={{ borderColor: '#6f42c1' }}
             />
           </div>
           <div className="mb-3">
-            <label className="form-label" style={{ color: '#6f42c1' }}>Message:</label>
+            <label className="form-label">Message:</label>
             <textarea
               className="form-control"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              style={{ borderColor: '#6f42c1' }}
             />
           </div>
-          <div className="text-center">
-            <button type="submit" className="btn btn-purple" style={{ backgroundColor: '#6f42c1', borderColor: '#6f42c1' }}>
-              Submit
-            </button>
-          </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </form>
       )}
     </div>
