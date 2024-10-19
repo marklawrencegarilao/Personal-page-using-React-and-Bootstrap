@@ -3,45 +3,45 @@ import React from 'react';
 function Skills() {
   return (
     <div className="container mt-5">
-      <h1 className="text-center mb-4" style={{ color: '#6f42c1' }}>My Skills</h1>
-      <div className="row text-center">
-        {/* Billiard Card */}
-        <div className="col-md-3 mb-4">
-          <div className="card border-0 shadow-lg" style={{ backgroundColor: '#f8f9fa' }}>
+      <h1 className="text-center mb-4">My Skills</h1>
+      <div className="row">
+        <div className="col-md-4 mb-3">
+          <div className="card">
             <div className="card-body">
-              <i className="bi bi-billiards" style={{ fontSize: '40px', color: '#6f42c1' }}></i>
-              <h5 className="card-title mt-3" style={{ color: '#6f42c1' }}>Billiard</h5>
-              <p className="card-text text-muted">Precision, focus, and strategy – key elements of my game.</p>
+              <h5 className="card-title">HTML</h5>
+              <p className="card-text">My first skill for building web structure.</p>
             </div>
           </div>
         </div>
-        {/* Cycling Card */}
-        <div className="col-md-3 mb-4">
-          <div className="card border-0 shadow-lg" style={{ backgroundColor: '#f8f9fa' }}>
+        <div className="col-md-4 mb-3">
+          <div className="card">
             <div className="card-body">
-              <i className="bi bi-bicycle" style={{ fontSize: '40px', color: '#6f42c1' }}></i>
-              <h5 className="card-title mt-3" style={{ color: '#6f42c1' }}>Cycling</h5>
-              <p className="card-text text-muted">Exploring new places and staying fit on two wheels.</p>
+              <h5 className="card-title">CSS</h5>
+              <p className="card-text">Styling web pages with responsive design and aesthetic look.</p>
             </div>
           </div>
         </div>
-        {/* Basketball Card */}
-        <div className="col-md-3 mb-4">
-          <div className="card border-0 shadow-lg" style={{ backgroundColor: '#f8f9fa' }}>
+        <div className="col-md-4 mb-3">
+          <div className="card">
             <div className="card-body">
-              <i className="bi bi-basketball" style={{ fontSize: '40px', color: '#6f42c1' }}></i>
-              <h5 className="card-title mt-3" style={{ color: '#6f42c1' }}>Basketball</h5>
-              <p className="card-text text-muted">Teamwork, strategy, and high energy on the court.</p>
+              <h5 className="card-title">Java</h5>
+              <p className="card-text">Learned from object-oriented programming and data structures and algorithms.</p>
             </div>
           </div>
         </div>
-        {/* Coding Card */}
-        <div className="col-md-3 mb-4">
-          <div className="card border-0 shadow-lg" style={{ backgroundColor: '#f8f9fa' }}>
+        <div className="col-md-4 mb-3">
+          <div className="card">
             <div className="card-body">
-              <i className="bi bi-laptop" style={{ fontSize: '40px', color: '#6f42c1' }}></i>
-              <h5 className="card-title mt-3" style={{ color: '#6f42c1' }}>Coding</h5>
-              <p className="card-text text-muted">Bringing ideas to life through web and game development.</p>
+              <h5 className="card-title">C#</h5>
+              <p className="card-text">Learning this year for game development. (Unity)</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 mb-3">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">React</h5>
+              <p className="card-text">Learning now for building dynamic user interfaces for web applications.</p>
             </div>
           </div>
         </div>
